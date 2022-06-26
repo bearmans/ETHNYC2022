@@ -23,7 +23,7 @@ contract Poof is ERC721 {
   mapping(address => mapping(address => bool)) public handshakes;
 
 //extremely basic ERC721 token returns to both wallets when both users attempt to interact w/contract while referencing other wallet
-  constructor() public ERC721("MyNFT", "NFT") {}
+  constructor() public ERC721("PrOOF", "NFT") {}
 
 //magically simple NFT function checks if address A has referenced address B; stores address if not, mints NFT for both wallets if so
   function makeFriends(address from, address to) public {
