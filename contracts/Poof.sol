@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
   */
 
   //Setup ERC721 NFT Contract and event emitters
-contract MyContract is ERC721 {
+contract Poof is ERC721 {
   event NotFound(address from, address to);
   event Found(address from, address to);
 
@@ -42,7 +42,6 @@ contract MyContract is ERC721 {
   }
 
 
-//sample code, I don't think this is applicable for our use case
   function mintNFT(address recipient)
     public
     returns (uint256)

@@ -1,45 +1,7 @@
-# Development Setup
+#Proof of Friendship NFT
+Simple solidity contract deployed to SKALE hackathon network to proof-of-concept a very simple NFT token that gets co-minted into both wallets when both wallets connect to the contract while referencing each other.
+On the most basic level this creates a blockchain event associated with two wallets at a point in time that can be referenced
 
-Hardhat is currently set up to deploy to testnets using Alchemy.
-
-Make an .env (copy .env.example) in the root directory and replace the placeholder variables with your API keys.
-
-Install dependencies
-```
-yarn install
-```
-
-# Contract
-
-## Testing
-```
-yarn test
-```
-
-## Deployment
-
-### On Hardhat Network
-
-Open two terminals. Run the local network node in one:
-```
-yarn hhnode
-```
-
-In the other, deploy to localhost:
-```
-yarn deploy localhost
-```
-
-### On a specific network
-Specify the target `network` like ropsten / rinkeby.
-
-```
-yarn deploy <network>
-```
-
-## Verification
-
-This task uses the hardhat-etherscan plugin to verify the source code on a deployed contract.
-```
-yarn verify <network> <contract_address>
-```
+#Needed:
+URI reference on IPFS for metadata (images)
+Immutable metadata is essential to expand usefulness of this concept for use in a larger social networking project or to reference memories, events etc
