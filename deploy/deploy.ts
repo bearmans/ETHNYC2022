@@ -1,8 +1,8 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
+import { ethers } from "hardhat";
 
 const func: DeployFunction = async (hre: HardhatRuntimeEnvironment): Promise<void> => {
-  const chainId = await hre.getChainId();
 
   const {deployments, getNamedAccounts} = hre;
   const {deploy} = deployments;
@@ -11,10 +11,9 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment): Promise<voi
 
   await deploy("MyContract", {
     from: deployer,
-    args: [1],
     log: true,
   });
 
-  const deployment = await hre.deployments.get("MyContract");
+  const deployment = await ethers.getContract("MyContract");
 }
 export default func;
